@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    font-size: 20pt;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    font-size:10.5pt;
+    font-family:sans-serif;
+    border: 1px #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.center{
+  display:flex;
+  justify-content:center;
+  }
+
+.second-table{
+  font-size:10.5pt;
+  font-family:sans-serif;
+  border: 1px #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+}
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <td style="border-left: 10px solid #4285F4">53 vu</td>
+        <td style="border-left: 10px solid #34A853">33 calls / min</td>
+        <td style="border-left: 10px solid #7CBB00">1062</td>
+        <td style="border-left: 10px solid #EA4335">16%</td>
+        <td style="border-left: 10px solid #FBBC05">4089 ms</td>
+        <td style="border-left: 10px solid #FBBC53">11498 ms</td>
+      </tr>
+  <tr>
+    <th>Max Users</th>
+    <th>Avg Throughput</th>
+    <th>Unique Transactions</th>
+    <th>Errors</th>
+    <th>Avg Response Time</th>
+    <th>90% Response Time</th>
+  </tr>
+</table>
+<pre></pre>
+<div class="center" >
+    <table id="second-table" border='1' style="border-color: white;float:left; width:33%" >
+    <tr>
+        <th>🕘 Duration:</th>
+        <td class="second-table">.98 hours</td>
+    </tr>
+    <tr>
+        <th>▶ Started:</th>
+        <td class="second-table">2017.Nov.21 07:20</td>
+    </tr>
+    <tr>
+        <th>■ Ended:</th>
+        <td class="second-table">2017.Nov.21 08:19</td>
+    </tr>
+    </table>
+    <table id="second-table" border='1' style="border-color: white;float:left; width:33%" >
+        <tr>
+            <th>📁 Test Type:</th>
+            <td class="second-table">Regression</td>
+        </tr>
+        <tr>
+            <th> Test Suite Name:</th>
+            <td class="second-table">Test Suite Name from TP</td>
+        </tr>
+        <tr>
+            <th> Response Codes:</th>
+            <td class="second-table">2xx 3xx 5xx</td>
+        </tr>
+        </table>
+        <table id="second-table" border='1' style="border-color: white;float:left; width:33%" >
+            <tr>
+                <th>🌏 Test Environment:</th>
+                <td class="second-table">Stage 2</td>
+            </tr>
+            <tr>
+                <th>&nbsp; </th>
+                <td class="second-table">&nbsp; </td>
+            </tr>
+            <tr>
+                <th>&nbsp; </th>
+                <td class="second-table">&nbsp; </td>
+            </tr>
+            </table>
+</div>
+<div class="center">
+        <div style="width:50%">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"
+                 ></canvas>
+        </div>
+        <div style="width:50%">
+         <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+        </div>
+        
+      </div>    
+</body>
+</html>

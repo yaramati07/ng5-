@@ -11,4 +11,13 @@ export class DataService {
   changeGoal(goal){
     this.goals.next(goal);
   }
+
+  cars = [
+     'ford','honda'
+  ]
+
+  myData() {
+    return 'This is my data, man!';
+  }
+  
 }
